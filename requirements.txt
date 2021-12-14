@@ -1,0 +1,7 @@
+sanic
+ujson
+requests
+BeautifulSoup4
+sanic_compress
+fuzzywuzzy
+python-Levenshtein

@@ -1,1 +1,14 @@
 env
+.trunk/*
+__pycache__/*
+.vscode/*
+.isort.cfg
+.flake8
+.gitignore
+secret_data.py
+aitrain.json
+aitrain_prepared.jsonl
+data.db
+.gitignore
+*.mp4
+*.min.js

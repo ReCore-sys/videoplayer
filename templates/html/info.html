@@ -1,0 +1,43 @@
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery.min.js"></script>
+</head>
+
+<div id="container">
+  <div id="content">
+    <div id="about">
+      <h1>
+        <div style="float: left; margin-bottom: 20px">{{name}}</div>
+        <div class="stage">
+          <div class="pyramid3d">
+            <div class="triangle side1"></div>
+            <div class="triangle side2"></div>
+            <div class="triangle side3"></div>
+            <div class="triangle side4"></div>
+          </div>
+        </div>
+      </h1>
+      <h3 style="clear: both" class="subhead">
+        <a>Length:</a>
+        {{dur}}
+      </h3>
+      <p id="pleft">{{desc}}</p>
+      <p id="pright">
+        <a href="{{url}}">
+          <img src="https://themoviedb.org/t/p/w300_and_h450_bestv2{{poster}}" alt="{{name}}" />
+      </p>
+      <script>
+        var oldURL = document.referrer;
+        $(document).on("keydown", function (e) {
+          if (e.which == 13) {
+            // Go to video here
+          }
+          if (e.which == 27) {
+            window.location.href = oldURL;
+            return false;
+          }
+        });
+      </script>
+    </div>
+  </div>
+</div>

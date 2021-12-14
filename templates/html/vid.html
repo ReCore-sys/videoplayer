@@ -1,0 +1,58 @@
+<head>
+  <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+  <link
+    href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+    rel="stylesheet"
+  />
+  <script src="jquery.min.js"></script>
+  <script src="video.js"></script>
+  <style>
+    body {
+      overflow: hidden;
+    }
+  </style>
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js vjs-theme-city"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    data-setup="{}"
+  >
+    <script>
+      var windowwidth = $(window).width();
+      var windowheight = $(window).height();
+      var video = $("#my-video");
+      video.attr("width", windowwidth);
+      video.attr("height", windowheight);
+    </script>
+    <source src="/video_feed/{{id}}" type="video/mp4" />
+    <!-- TODO: Get it to start at a specific point -->
+    <script>
+      var myPlayer = $("#vjs_video_");
+      $("#my-video").on("click", function () {
+        var player = videojs.Html5;
+        console.log(player);
+        player.tech_.Html5.setCurrentTime(20);
+      });
+    </script>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script>
+    window.HELP_IMPROVE_VIDEOJS = false;
+  </script>
+</body>

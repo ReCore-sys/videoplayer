@@ -1,0 +1,14 @@
+li.selected {
+  /*padding: 2%;*/
+  transition: all 0.2s;
+  border: 5px solid #fff;
+}
+
+li.selected li.itembox::marker {
+  background-color: black;
+}
+
+li.presel {
+  transition: all 0.2s;
+  border: 5px solid gray;
+}
