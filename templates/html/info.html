@@ -1,6 +1,8 @@
 <head>
   <link rel="stylesheet" href="style.css" />
-  <script src="jquery.min.js"></script>
+  <link rel="stylesheet" href="info.css" />
+  <script src='../static/js/jquery.min.js'></script>
+  <script src='../static/js/keyboardmagic.js'></script>
 </head>
 
 <div id="container">
@@ -26,18 +28,11 @@
         <a href="{{url}}">
           <img src="https://themoviedb.org/t/p/w300_and_h450_bestv2{{poster}}" alt="{{name}}" />
       </p>
-      <script>
-        var oldURL = document.referrer;
-        $(document).on("keydown", function (e) {
-          if (e.which == 13) {
-            // Go to video here
-          }
-          if (e.which == 27) {
-            window.location.href = oldURL;
-            return false;
-          }
-        });
-      </script>
+      <div class="playvideobutton">
+        <a link="{{id}}" class="link">
+          <img src="../static/img/play.png" alt="Play Video"/>
+        </a>
+      </div>
     </div>
   </div>
 </div>

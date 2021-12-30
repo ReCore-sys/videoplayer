@@ -39,12 +39,13 @@
               $(document).on("keypress", function (e) {
                 if (e.which == 13) {
                   if (e.target.nodeName.toLowerCase() === "input") {
+                    // Only search if the input is focused
                     var inpval = $("input").val();
                     console.log(inpval);
                     var newloc = "http://127.0.0.1:8000/search/" + inpval;
                     console.log(newloc);
                     window.location = newloc;
-                    return false;
+                    return false; // We need to return false cos IDFK
                   } else {
                     var link = $(".selected").attr("href");
                     window.location = link;
@@ -59,6 +60,7 @@
         <div class="resultsarea">{{results}}</div>
       </ul>
     </div>
+    <!-- I have no idea how this works, I yoinked it off stack overflow -->
     <script>
       var li = $("li");
       var liSelected;
@@ -91,6 +93,4 @@
       });
     </script>
   </body>
-
-  <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

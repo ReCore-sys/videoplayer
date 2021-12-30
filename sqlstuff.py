@@ -60,4 +60,4 @@ class SQL:
 
 if __name__ == "__main__":
     sql = SQL(f"{filepath}/data.db", "files")
-    sql.create_collumns(["poster", "len"])
+    sql.create_collumns(["watched"])
